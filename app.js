@@ -108,3 +108,103 @@ console.log("Hello World");
 
 // average_marking(student_data)
 
+
+
+/*According to Wikipedia a happy number is defined by the following process :
+
+"Starting with any positive integer, replace the number by the sum of the squares of its digits, and repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1. Those numbers for which this process ends in 1 are happy numbers, while those that do not end in 1 are unhappy numbers (or sad numbers)".
+
+*/
+
+
+// function HappyNummber(num){
+//     let numberCollection =[]
+//     if(num){
+//         while(num !== 1 ){
+//             if(numberCollection.includes(num)){
+//                 console.log("Its Not a Happy Number");
+//                 console.log(numberCollection);
+//                 return
+//             }
+
+
+//             numberCollection.push(num);
+
+
+//             num = num.toString().split('').map((e)=> e**2).reduce((total, val)=> total + val, 0)
+//         }
+//     }
+
+//     console.log("Number is Happy Number");
+//     console.log(numberCollection)
+// }
+
+// HappyNummber(49)
+
+
+/*Write a JavaScript program that iterates integers from 1 to 100. But for multiples of three print "Fizz" instead of the number and for multiples of five print "Buzz". For numbers multiples of both three and five print "FizzBuzz".*/
+
+// function fizzBuzz(){
+//     for(let x = 1; x<=100; x++){
+//         if(x%3==0 && x%5==0){
+//             console.log("FizzBuzz " + x)
+//         }else if(x%5==0){
+//             console.log("Buzz " + x)
+//         }else if(x%3==0){
+//             console.log("Fizz " + x)
+//         }
+//     }
+// }
+
+// fizzBuzz()
+
+
+/*Write a JavaScript program to find the Armstrong numbers of 3 digits.
+
+Note : An Armstrong number of three digits is an integer such that the sum of the cubes of its digits is equal to the number itself. For example, 371 is an Armstrong number since 3**3 + 7**3 + 1**3 = 371.*/
+
+// function Armstrong(num){
+//     if(num){
+//     let  result = num.toString().split('').map((val)=>val**3).reduce((total, val)=>total + val, 0);
+//         if(num === result){
+//             console.log("Its an Armstrong Number")
+//         }
+//         else{
+//             console.log("Its not an Armstrong Number")
+//         }
+//     }
+// }
+
+// Armstrong(371)
+
+/*Write a JavaScript program to construct the following pattern, using a nested for loop.*/
+
+// function pattern(num){
+//     let str ="";
+//     for(let x=0; x<=num; x++){
+//         for(let y = 1; y<=x; y++ ){
+//             str += "*"
+//         }
+//         str += "\n"
+//     }
+
+//     console.log(str)
+// }
+
+// pattern(6)
+
+
+/*Write a JavaScript program to sum 3 and 5 multiples under 1000.*/
+function sum3_5(){
+   let result = 0;
+    for(let x = 1; x<=1000; x++){
+       
+        if(x%5 ==0 && x%3==0){
+            console.log(x)
+            result += x
+        }
+    }
+    console.log(result)
+}
+
+sum3_5()
